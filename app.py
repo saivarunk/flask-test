@@ -7,6 +7,11 @@ def hello():
     response = {'success': True, 'message': 'Hello !'}
     return jsonify(response), 200
 
+@app.route("/health")
+def healthy():
+    response = {'success': True, 'message': 'Healthy !'}
+    return jsonify(response), 200
+
 def create_app():
     return app
 
