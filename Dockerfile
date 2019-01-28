@@ -11,7 +11,7 @@ ADD app.py /app/app.py
 ADD integration_tests.sh /app
 ADD integration_tests.py /app
 
-RUN /bin/sh "./integration_tests.sh"
+# RUN /bin/sh "./integration_tests.sh"
 
 FROM test as runtime
 
