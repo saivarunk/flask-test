@@ -22,3 +22,9 @@ class Unittest(unittest.TestCase):
         self.assertEqual(response.get_json()['message'], 'Healthy !')
         self.assertEqual(response.get_json()['success'], True)
         self.assertEqual(response.status_code, 200)
+
+    def test_valid_response_health_fail(self):
+        response = self.client.get('/health')
+        self.assertEqual(response.get_json()['message'], 'Healthy !')
+        self.assertEqual(response.get_json()['success'], True)
+        self.assertEqual(response.status_code, 300)
