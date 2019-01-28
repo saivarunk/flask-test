@@ -1,5 +1,30 @@
 ---
 jobs:
+- name: run-integration-tests
+  public: true
+  serial: true
+  plan:
+  - get: flask-test-source
+    trigger: true
+  - task: run-tests
+    privileged: true
+    config:
+        platform: linux
+        inputs:
+        - name: flask-test-source
+        image_resource:
+            type: docker-image
+            source:
+              repository: python:3.6.4-alpine3.7
+        run:
+            path: sh
+            args:
+            - -exc
+                - |
+                    cd ./flask-test-source
+                    pip install -r requirements.txt
+                    python -m unittest integration_tests
+
 - name: build-docker-image
   public: true
   serial: true
