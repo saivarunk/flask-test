@@ -2,12 +2,7 @@
 
 # install python and dependencies
 
-apt-get update && apt-get install -y python3 && apt-get install -y python-pip
-
-apt-get install -y curl
-
-curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
-python3 get-pip.py
+apt-get install -y python3 && apt-get install -y python-pip
 
 # export PYTHON_PIP_VERSION=19.0.1
 
@@ -39,16 +34,16 @@ python3 get-pip.py
 # 		\) -exec rm -rf '{}' +; \
 # 	rm -f get-pip.py
 
-echo "Python version"
-python3 -V
-
-echo "Pip version"
-pip3 -V
-pip -V
-
 cd flask-test-source && ls -l
 
+python3 get-pip.py
+
 pip install -r requirements.txt
+
+
+apt-get install --virtual build-deps gcc python3-dev musl-dev \
+  && apt-get install postgresql-dev \
+  && pip install psycopg2
 
 python3 test_db.py
 
