@@ -2,9 +2,12 @@
 
 # echo "http://nl.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repository
 
-apk update && apk upgrade
-
 echo "Hello from script"
+
+apt-get update && apt-get install python3
+
+echo "Python version"
+python -V
 
 # sudo apk add build-base
 
