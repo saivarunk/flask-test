@@ -7,13 +7,13 @@ apk update && apk upgrade
 # sudo apk add build-base
 
 # setup postgres db for integration tests
-sudo apk add postgresql postgresql-contrib
+apk add postgresql postgresql-contrib
 
 # Initialize database
-sudo /etc/init.d/postgresql start
+/etc/init.d/postgresql start
 
 # Enable and start postgresql server
-sudo rc-update add postgresql
+rc-update add postgresql
 
 # cd flask-test-source && ls -l
 
