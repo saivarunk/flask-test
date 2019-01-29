@@ -1,6 +1,10 @@
 #!/bin/sh
 
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+echo "http://nl.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repository
+
+apk update && apk upgrade
+
+apk add build-base
 
 # setup postgres db for integration tests
 apk add postgresql postgresql-contrib
