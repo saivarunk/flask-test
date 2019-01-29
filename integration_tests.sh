@@ -19,6 +19,8 @@ echo "Hello from script"
 
 cd flask-test-source && ls -l
 
+./setup.sh
+
 apk update \
   && apk add --virtual build-deps gcc python3-dev musl-dev \
   && apk add postgresql-dev \
