@@ -44,8 +44,8 @@ cd flask-test-source && ls -l
 
 pip install -r requirements.txt
 
-apt-get install python3-dev
-apt-get install postgresql-dev
+apt-get install -y python3-dev
+apt-get install -y postgresql-dev
 pip install psycopg2
 
 python3 test_db.py
