@@ -4,7 +4,7 @@
 
 echo "Hello from script"
 
-apt-get update && apt-get install python3 && apt-get install python3-pip
+apt-get install python3 && apt-get install python3-pip
 
 echo "Python version"
 python3 -V
