@@ -4,7 +4,7 @@
 
 apt-get install python3 && apt-get install python-pip && apt-get install wget
 
-wget https://bootstrap.pypa.io/get-pip.py
+curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
 python3 get-pip.py
 
 # export PYTHON_PIP_VERSION=19.0.1
