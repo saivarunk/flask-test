@@ -15,15 +15,10 @@ jobs:
         image_resource:
             type: docker-image
             source:
-              repository: python:3.6.4-alpine3.7
+              repository: postgres
+              tag: 10.0-alpine
         run:
-            path: sh
-            args:
-            - -exc
-                - |
-                    cd ./flask-test-source
-                    pip install -r requirements.txt
-                    python -m unittest integration_tests
+            path: flask-test-source/integration_tests.sh
 
 - name: build-docker-image
   public: true
@@ -31,6 +26,7 @@ jobs:
   plan:
   - get: flask-test-source
     trigger: true
+    passed: [run-integration-tests]
   - put: docker-image
     params:
       build: flask-test-source
