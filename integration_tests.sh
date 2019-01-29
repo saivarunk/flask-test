@@ -4,33 +4,15 @@
 
 echo "Hello from script"
 
-apt-get update && apt-get install python3
+apt-get update && apt-get install python3 && apt-get install python3-pip
 
 echo "Python version"
 python3 -V
 
-# sudo apk add build-base
-
-# setup postgres db for integration tests
-# apk add postgresql postgresql-contrib
-
-# Initialize database
-# /etc/init.d/postgresql start
-
-# Enable and start postgresql server
-# rc-update add postgresql
-
-pwd
+echo "Pip version"
+pip3 -V
 
 cd flask-test-source && ls -l
-
-# ./setup.sh
-
-# apk update \
-#   && apk add --virtual build-deps gcc python3-dev musl-dev \
-#   && apk add postgresql-dev \
-#   && pip install psycopg2 \
-#   && apk del build-deps
 
 pip3 install -r requirements.txt
 
