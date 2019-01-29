@@ -50,4 +50,6 @@ cd flask-test-source && ls -l
 
 pip install -r requirements.txt
 
+python3 test_db.py
+
 python3 -m unittest integration_tests
