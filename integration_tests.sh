@@ -1,19 +1,21 @@
 #!/bin/sh
 
-echo "http://nl.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repository
+# echo "http://nl.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repository
 
 apk update && apk upgrade
+
+echo "Hello from script"
 
 # sudo apk add build-base
 
 # setup postgres db for integration tests
-apk add postgresql postgresql-contrib
+# apk add postgresql postgresql-contrib
 
 # Initialize database
-/etc/init.d/postgresql start
+# /etc/init.d/postgresql start
 
 # Enable and start postgresql server
-rc-update add postgresql
+# rc-update add postgresql
 
 # cd flask-test-source && ls -l
 
