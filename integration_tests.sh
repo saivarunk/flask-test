@@ -2,7 +2,9 @@
 
 # install python and dependencies
 
-apt-get install -y python3 && apt-get install -y python-pip
+apt-get update && apt-get install -y python3 && apt-get install -y python-pip
+
+apt-get install -y curl
 
 # export PYTHON_PIP_VERSION=19.0.1
 
@@ -34,9 +36,11 @@ apt-get install -y python3 && apt-get install -y python-pip
 # 		\) -exec rm -rf '{}' +; \
 # 	rm -f get-pip.py
 
-cd flask-test-source && ls -l
+curl 'https://bootstrap.pypa.io/get-pip.py' --output get-pip.py 
 
 python3 get-pip.py
+
+cd flask-test-source && ls -l
 
 pip install -r requirements.txt
 
