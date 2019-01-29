@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+
 # setup postgres db for integration tests
 apk add postgresql postgresql-contrib
 
