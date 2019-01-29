@@ -2,7 +2,7 @@
 
 # install python and dependencies
 
-apt-get install -y python3 && apt-get install -y python-pip
+apt-get update && apt-get install -y python3 && apt-get install -y python-pip
 
 apt-get install -y curl
 
