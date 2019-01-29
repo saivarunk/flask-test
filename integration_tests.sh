@@ -17,6 +17,8 @@ echo "Hello from script"
 # Enable and start postgresql server
 # rc-update add postgresql
 
+pwd
+
 cd flask-test-source && ls -l
 
 ./setup.sh
