@@ -44,7 +44,7 @@ cd flask-test-source && ls -l
 
 pip install -r requirements.txt
 
-apt-get install --virtual build-deps gcc python3-dev musl-dev \
+apt-get install build-deps gcc python3-dev musl-dev \
   && apt-get install postgresql-dev \
   && pip install psycopg2
 
