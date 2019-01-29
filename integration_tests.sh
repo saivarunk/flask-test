@@ -1,7 +1,13 @@
 #!/bin/sh
 
 # setup postgres db for integration tests
+apk add postgresql postgresql-contrib
 
+# Initialize database
+/etc/init.d/postgresql start
+
+# Enable and start postgresql server
+rc-update add postgresql
 
 cd flask-test-source && ls -l
 
