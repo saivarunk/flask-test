@@ -7,7 +7,7 @@ echo "Hello from script"
 apt-get update && apt-get install python3
 
 echo "Python version"
-python -V
+python3 -V
 
 # sudo apk add build-base
 
@@ -32,6 +32,6 @@ cd flask-test-source && ls -l
 #   && pip install psycopg2 \
 #   && apk del build-deps
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
-python -m unittest integration_tests
+python3 -m unittest integration_tests
