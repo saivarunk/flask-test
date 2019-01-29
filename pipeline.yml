@@ -15,8 +15,8 @@ jobs:
         image_resource:
             type: docker-image
             source:
-              repository: postgres
-              tag: 10.0-alpine
+              repository: python
+              tag: 3.6.4-alpine3.7
         run:
             path: flask-test-source/integration_tests.sh
 

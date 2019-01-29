@@ -27,4 +27,4 @@ class Unittest(unittest.TestCase):
         response = self.client.get('/health')
         self.assertEqual(response.get_json()['message'], 'Healthy !')
         self.assertEqual(response.get_json()['success'], True)
-        self.assertEqual(response.status_code, 300)
+        self.assertEqual(response.status_code, 200)
