@@ -10,11 +10,11 @@
 
 #python3 get-pip.py
 
-service postgresql start
+postgresql
 
-cd flask-test-source && ls -l
+# cd flask-test-source && ls -l
 
-pip install -r requirements.txt
+# pip install -r requirements.txt
 
 #apt-get install -y python3-dev
 #apt-get install -y postgresql-dev
