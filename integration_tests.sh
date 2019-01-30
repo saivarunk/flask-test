@@ -10,6 +10,8 @@
 
 #python3 get-pip.py
 
+echo "test"
+
 postgresql
 
 # cd flask-test-source && ls -l
